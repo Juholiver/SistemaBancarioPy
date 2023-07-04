@@ -11,9 +11,9 @@ saldo = 0
 limite = 500
 extrato = ""
 numero_saques = 0
-LIMITES_SAQUES = 3
+LIMITE_SAQUES = 3
 
-while true:
+while True:
 
     opcao = input(menu)
 
@@ -32,7 +32,8 @@ while true:
     elif opcao == "s":
         valor = float(input("Informe o valor do saque: "))
         excedeu_saldo = valor > saldo
-        excedeu_limite = valor > limiteexcedeu_saques >= LIMITE_SAQUES
+        excedeu_limite = valor > limite
+        excedeu_saques = numero_saques >= LIMITE_SAQUES
 
         if excedeu_saldo:
             print("Operação falhou! Você não tem saldo suficiente.")
